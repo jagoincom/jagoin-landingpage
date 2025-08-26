@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - Loopro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --brand-primary: #5521cb; 
+            --brand-primary-dark: #451aa3; 
+            --brand-secondary: #4633c8;
+            --text-body: #1B2023; --bg-one: #FAFAFA; --bg-two: #EFF0F0; --text-muted: #A7A8AA;
+            --bg-panel: #FFFFFF; --bg-header: rgba(250, 250, 250, 0.8);
+        }
+        .dark { 
+            --text-body: #FAFAFA; --bg-one: #1B2023; --bg-two: #2a2f33; --text-muted: #A7A8AA; 
+            --bg-panel: #2a2f33; --bg-header: rgba(27, 32, 35, 0.8);
+        }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-one); color: var(--text-body); transition: background-color 0.3s, color 0.3s; }
+        .bg-brand-primary { background-color: var(--brand-primary); } .text-brand-primary { color: var(--brand-primary); }
+        .hover\:bg-brand-primary-dark:hover { background-color: var(--brand-primary-dark); }
+        .text-brand-secondary { color: var(--brand-secondary); } .bg-background-dua { background-color: var(--bg-two); }
+        .toggle-btn:hover { background-color: var(--brand-primary); }
+        .toggle-btn:hover > i, .toggle-btn:hover > span { color: #FAFAFA !important; }
+        .dark .text-gray-600, .dark .text-gray-700, .dark .text-gray-500 { color: var(--text-muted); }
+        .dark .border-gray-300 { border-color: #4a4f53; }
+        .bg-header-custom { background-color: var(--bg-header); } .bg-panel-custom { background-color: var(--bg-panel); }
+        .aspect-video { aspect-ratio: 16 / 9; }
+    </style>
+</head>
+<body class="antialiased">
+    <header class="sticky top-0 z-50 w-full bg-header-custom backdrop-blur-sm shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img src="jagoin-logo-plus.png" alt="Jagoin Logo" class="h-8 w-auto">
+                    </a>
+                </div>
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <button id="theme-toggle" class="toggle-btn p-2 rounded-full text-text-body transition-colors duration-200"><i id="theme-icon-sun" class="fa-solid fa-sun"></i><i id="theme-icon-moon" class="fa-solid fa-moon hidden"></i></button>
+                    <button id="lang-toggle" class="toggle-btn font-semibold text-sm text-text-body rounded-full px-3 py-2 transition-colors duration-200"><span id="lang-text">EN</span></button>
+                    <a href="index.html" data-translate-key="homeButton" class="inline-block bg-brand-primary text-white font-semibold px-5 py-2 rounded-lg text-sm shadow-md hover:bg-brand-primary-dark transition-colors duration-300">Beranda</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-5 gap-12">
+                <div class="lg:col-span-3 space-y-8">
+                    <div class="bg-panel-custom rounded-2xl shadow-lg overflow-hidden">
+                        <img src="loopro-details.png" alt="Loopro Product Image" class="w-full">
+                        <div class="p-6">
+                             <h1 data-translate-key="productName" class="text-4xl font-extrabold tracking-tight">Loopro</h1>
+                             <p data-translate-key="productDesc" class="mt-4 text-lg text-gray-600"></p>
+                             <div class="mt-6">
+                                <h3 data-translate-key="featuresTitle" class="text-xl font-bold mb-3"></h3>
+                                <ul data-translate-key="featuresContent" class="list-disc list-inside text-gray-600 space-y-2"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-panel-custom p-6 rounded-2xl shadow-lg">
+                        <h2 data-translate-key="tutorialTitle" class="text-2xl font-bold mb-4"></h2>
+                        <div class="aspect-video"><iframe class="w-full h-full rounded-lg" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2">
+                    <div class="sticky top-24">
+                        <div class="bg-panel-custom p-6 rounded-2xl shadow-lg">
+                            <div>
+                                <h3 data-translate-key="notesTitle" class="text-xl font-bold mb-3"></h3>
+                                <ul data-translate-key="notesContent" class="list-disc list-inside text-gray-600 space-y-2"></ul>
+                            </div>
+                            <hr class="my-6 border-gray-300 dark:border-gray-600">
+                            <div class="text-center">
+                                <p data-translate-key="investmentText" class="mb-4 text-gray-600"></p>
+                                <div data-translate-key="priceLabel"></div>
+                                <p data-translate-key="licenseLabel" class="text-xl text-gray-500 mt-4 font-semibold"></p>
+                                <a href="https://lynk.id/ismud/530qeer5g9mm/checkout" target="_blank" data-translate-key="buyNowButton" class="mt-6 block w-full bg-brand-primary text-white font-bold text-lg py-4 rounded-lg shadow-lg hover:bg-brand-primary-dark transition-transform duration-300 transform hover:scale-105"></a>
+                                <p data-translate-key="discountDisclaimer" class="mt-3 text-xs italic text-gray-400 dark:text-gray-500"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-background-dua pt-16 pb-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="space-y-4">
+                    <a href="index.html">
+                        <img src="jagoin-logo-plus.png" alt="Jagoin Logo Footer" class="h-10 w-auto mx-auto md:mx-0">
+                    </a>
+                    <p data-translate-key="footerDesc" class="text-gray-600 text-sm max-w-xs mx-auto md:mx-0"></p>
+                </div>
+                <div class="flex flex-col justify-center items-center md:items-start"><div class="flex flex-col space-y-2 items-center md:items-start"><a href="mailto:info@jagoin.com" class="flex items-center text-gray-600 hover:text-brand-primary transition-colors"><i class="fa-solid fa-envelope w-5 h-5 mr-2"></i> info@jagoin.com</a><a href="https://wa.me/6282326064979" target="_blank" class="flex items-center text-gray-600 hover:text-brand-primary transition-colors"><i class="fa-brands fa-whatsapp w-5 h-5 mr-2"></i> +62 823-2606-4979</a><a href="https://t.me/infojagoin" target="_blank" class="flex items-center text-gray-600 hover:text-brand-primary transition-colors"><i class="fa-brands fa-telegram w-5 h-5 mr-2"></i> @infojagoin</a></div></div>
+                <div class="flex flex-col justify-center items-center md:items-start"><nav class="flex flex-col space-y-2 items-center md:items-start"><a href="terms.html" class="text-gray-600 hover:text-brand-primary transition-colors">Terms of Service</a><a href="privacy.html" class="text-gray-600 hover:text-brand-primary transition-colors">Privacy Policy</a><a href="disclaimer.html" class="text-gray-600 hover:text-brand-primary transition-colors">Disclaimer</a></nav></div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-300 text-center text-sm text-gray-500"><p>Copyright © <span id="year"></span> Jagoin. <span data-translate-key="copyright">All rights reserved.</span></p></div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const translations = {
+                id: {
+                    homeButton: 'Beranda',
+                    productName: 'Loopro',
+                    productDesc: 'Relaxing ASMR Video Creator. Ciptakan video ASMR dan relaksasi yang menenangkan dengan mudah, tanpa perlu peralatan mahal.',
+                    featuresTitle: 'Fitur Utama',
+                    featuresContent: `<li class="ml-2">Pustaka suara ASMR yang luas.</li><li class="ml-2">Gabungkan beberapa suara sekaligus.</li><li class="ml-2">Visual latar belakang yang menenangkan.</li><li class="ml-2">Buat video berdurasi panjang (looping).</li>`,
+                    tutorialTitle: 'Video Tutorial',
+                    notesTitle: 'Catatan Penting',
+                    notesContent: `<li class="ml-2">Tools ini hanya untuk Windows.</li><li class="ml-2">Membutuhkan koneksi internet aktif.</li><li class="ml-2">Dukungan update gratis selamanya.</li><li class="ml-2">Gunakan dengan bijak dan hormati hak cipta.</li>`,
+                    investmentText: 'Investasi jangka panjang untuk meningkatkan produktivitas. Dapatkan segera tools ini dengan penawaran terbaik saat ini. Miliki tools terbaik ini hanya dengan harga',
+                    priceLabel: '<p class="text-2xl font-normal text-gray-400 line-through" style="margin-bottom: 15px;">Rp 220K</p><p class="text-6xl font-extrabold text-brand-primary -mt-2">Rp 150K</p>',
+                    licenseLabel: 'Lisensi Lifetime',
+                    buyNowButton: 'Beli Sekarang',
+                    discountDisclaimer: '*Diskon terbatas. Harga sewaktu-waktu bisa berubah.',
+                    footerDesc: 'Platform penyedia tools digital untuk membantu content creator tumbuh dan berkembang.',
+                    copyright: 'All rights reserved.'
+                },
+                en: {
+                    homeButton: 'Home',
+                    productName: 'Loopro',
+                    productDesc: 'Relaxing ASMR Video Creator. Effortlessly create calming ASMR and relaxation videos without needing expensive equipment.',
+                    featuresTitle: 'Key Features',
+                    featuresContent: `<li class="ml-2">Extensive library of ASMR sounds.</li><li class="ml-2">Mix and match multiple sounds.</li><li class="ml-2">Soothing background visuals.</li><li class="ml-2">Create long, looping videos.</li>`,
+                    tutorialTitle: 'How-To Video',
+                    notesTitle: 'Good to Know',
+                    notesContent: `<li class="ml-2">This tool is for Windows only.</li><li class="ml-2">Requires an active internet connection.</li><li class="ml-2">Free lifetime updates included.</li><li class="ml-2">Please use responsibly and respect copyright.</li>`,
+                    investmentText: 'A long-term investment to boost your productivity. Get this tool now with our best offer. Own this top-tier tool for just',
+                    priceLabel: '<p class="text-2xl font-normal text-gray-400 line-through" style="margin-bottom: 15px;">$15</p><p class="text-6xl font-extrabold text-brand-primary -mt-2">$10</p>',
+                    licenseLabel: 'Lifetime License',
+                    buyNowButton: 'Buy Now',
+                    discountDisclaimer: '*Limited-time discount. Price may change at any time.',
+                    footerDesc: 'The all-in-one platform built to help creators like you grow and succeed.',
+                    copyright: 'All rights reserved.'
+                }
+            };
+            const langToggleButton = document.getElementById('lang-toggle');
+            const langText = document.getElementById('lang-text');
+            let currentLang = localStorage.getItem('lang') || 'id';
+            const setLanguage = (lang) => {
+                currentLang = lang;
+                localStorage.setItem('lang', lang);
+                document.documentElement.lang = lang;
+                document.querySelectorAll('[data-translate-key]').forEach(el => {
+                    const key = el.getAttribute('data-translate-key');
+                    if (translations[lang][key]) { el.innerHTML = translations[lang][key]; }
+                });
+                langText.textContent = lang === 'id' ? 'EN' : 'ID';
+            };
+            langToggleButton.addEventListener('click', () => { setLanguage(currentLang === 'id' ? 'en' : 'id'); });
+            const themeToggleButton = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('theme-icon-sun');
+            const moonIcon = document.getElementById('theme-icon-moon');
+            const htmlElement = document.documentElement;
+            const applyTheme = (theme) => {
+                if (theme === 'dark') { htmlElement.classList.add('dark'); sunIcon.classList.add('hidden'); moonIcon.classList.remove('hidden'); } 
+                else { htmlElement.classList.remove('dark'); sunIcon.classList.remove('hidden'); moonIcon.classList.add('hidden'); }
+            };
+            themeToggleButton.addEventListener('click', () => {
+                const newTheme = htmlElement.classList.contains('dark') ? 'light' : 'dark';
+                localStorage.setItem('theme', newTheme);
+                applyTheme(newTheme);
+            });
+            setLanguage(currentLang);
+            applyTheme(localStorage.getItem('theme') || 'light');
+            document.getElementById('year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>
